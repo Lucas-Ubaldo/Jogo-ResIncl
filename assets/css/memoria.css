@@ -28,6 +28,18 @@
                  1px 1px 0 #000;
   }
   
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+}
+
+  footer img {
+      max-width: 20em;
+  }
   .menu {
     background: #fff;
     width: 90%;
@@ -64,7 +76,19 @@
     color: #181531;
     cursor: pointer;
   }
-  
+
+  #back {
+    background-color: #181531; 
+    border-radius: 40px; 
+    color: #ffffff; 
+    width: 50%;
+}
+
+  #back:hover {
+      background-color: #ffffff;
+      color: #181531;
+  }
+
   .actions-jogo {
     display: flex;
     flex-direction: row;
@@ -161,11 +185,11 @@
   
   .card-name {
     position: absolute;
-    bottom: 20px; /* Ajuste a posição conforme necessário */
+    bottom: 20px; 
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.2rem; /* Tamanho da fonte do nome da carta */
-    color: rgb(255, 255, 255); /* Cor do texto */
+    font-size: 1.2rem; 
+    color: rgb(255, 255, 255); 
     text-align: center;
     white-space: nowrap;
   }
@@ -257,5 +281,7 @@
         font-size: 1.2rem;
       }
 
-    
+      footer img {
+        max-width: 15em;
+      }
 }
