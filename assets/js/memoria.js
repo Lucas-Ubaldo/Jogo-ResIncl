@@ -15,18 +15,20 @@ function startGame(level) {
         .then((res) => res.json())
         .then((data) => {
             let uniqueCards;
+            let numColumns;
+            let levelText;
             if (level === 1) {
                 uniqueCards = getRandomUniqueCards(data, 3); 
-                gridContainer.style.gridTemplateColumns = "repeat(3, 140px)"; 
-                gridContainer.style.gridTemplateRows = "repeat(2, calc(140px / 2 * 3))"; 
+                numColumns = 3;
+                levelText = "Nível 1";
             } else if (level === 2) {
                 uniqueCards = getRandomUniqueCards(data, 4); 
-                gridContainer.style.gridTemplateColumns = "repeat(4, 140px)"; 
-                gridContainer.style.gridTemplateRows = "repeat(2, calc(140px / 2 * 3))"; 
+                numColumns = 4;
+                levelText = "Nível 2";
             } else if (level === 3) {
                 uniqueCards = getRandomUniqueCards(data, 6); 
-                gridContainer.style.gridTemplateColumns = "repeat(4, 140px)"; 
-                gridContainer.style.gridTemplateRows = "repeat(2, calc(140px / 2 * 3))";
+                numColumns = 4;
+                levelText = "Nível 3";
             } else {
                 console.error("Nível de dificuldade inválido!");
                 return;
@@ -34,6 +36,13 @@ function startGame(level) {
 
             cards = [...uniqueCards, ...uniqueCards];
 
+            // Ajusta dinamicamente o tamanho do grid
+            const numRows = Math.ceil(uniqueCards.length / numColumns);
+            gridContainer.style.gridTemplateColumns = `repeat(${numColumns}, min-content)`;
+            gridContainer.style.gridTemplateRows = `repeat(${numRows}, min-content)`;
+
+            document.querySelector('.game-container h2').textContent = levelText;
+        
             shuffleCards();
             generateCards();
             
