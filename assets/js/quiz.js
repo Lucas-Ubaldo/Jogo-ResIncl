@@ -20,7 +20,7 @@ const questions = [
         ]
     },
     {
-        question: "Qual é o nome do seleção abaixo?",
+        question: "Qual é o nome da seleção abaixo?",
         image: "../images/brasil.png",
         answers: [
             {text: "França", correct: false},

@@ -27,11 +27,11 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
-    padding: 30px;
+    padding: 20px;
 }
 
 .app h1{
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #001e4d;
     font-weight: 600;
     border-bottom: 1px solid #333;
@@ -43,7 +43,7 @@ body{
 }
 
 .quiz h2{
-    font-size: 1.4rem;
+    font-size: 2rem;
     color: #001e4d;
     font-weight: 600;
 }
@@ -59,13 +59,13 @@ body{
     background: #FFBB0B;
     color: #001e4d;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     width: 100%;
     border: 1px solid #001e4d;
     padding: 10px;
     margin: 10px 0;
     text-align: left;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -82,14 +82,14 @@ body{
 #next-btn{
     background: #001e4d;
     color: #fff;
-    font-weight: 500;
-    font-size: 1.1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
     width: 50%;
     height: auto;
     border: 0;
-    padding: 10px;
+    padding: 15px;
     margin: 20px auto 0;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
     display: none;
 }
@@ -101,41 +101,16 @@ body{
     background: #ff9393;
 }
 
-/* Estilos para telas menores que 600px */
-@media screen and (max-width: 600px) {
-
-    .app h1 {
-        font-size: 1.5rem;
-        padding-bottom: 20px;
-    }
-
-    .quiz h2 {
-        font-size: 1.4rem;
-    }
-
-    #question img {
-        width: 40%;
-        margin: 10px auto;
-    }
-
-    .btn {
-        font-size: 1.2rem;
-        border-radius: 20px;
-    }
-
-    #next-btn {
-        width: 60%;
-        font-size: 1.2rem;
-        border-radius: 20px;
-    }
-}
-
 /* Estilos para telas menores que 400px */
 @media screen and (max-width: 400px) {
 
+    .app{
+        padding: 15px;
+    }
+
     .app h1 {
         font-size: 1.5rem;
-        padding-bottom: 15px;
+        padding-bottom: 5px;
     }
 
     .quiz h2 {
@@ -143,18 +118,18 @@ body{
     }
 
     #question img {
-        width: 55%;
+        width: 45%;
         margin: 10px auto;
     }
 
     .btn {
-        font-size: 1.2rem;
-        border-radius: 20px;
+        font-size: 1.1rem;
     }
 
     #next-btn {
         width: 60%;
-        font-size: 1.2rem;
-        border-radius: 20px;
+        font-size: 1.1rem;
+        padding: 7px;
+        
     }
 }

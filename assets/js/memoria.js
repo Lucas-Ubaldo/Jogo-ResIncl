@@ -124,7 +124,7 @@ function checkForMatch() {
             congratsMessage.style.display = 'block';
             setTimeout(() => {
                 congratsMessage.style.display = 'none';
-            }, 2000); // Tempo de exibição da mensagem em milissegundos (2 segundos no exemplo)
+            }, 5000); // Tempo de exibição da mensagem em milissegundos (2 segundos no exemplo)
         }
     } else {
         lockBoard = true;
