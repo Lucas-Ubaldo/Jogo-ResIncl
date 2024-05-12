@@ -5,58 +5,54 @@ let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
+let currentLevel;
 
 document.querySelector(".score").textContent = score;
 
 function startGame(level) {
+    currentLevel = level;
     fetch("../assets/data/cards.json")
         .then((res) => res.json())
         .then((data) => {
-            // Filtra o conjunto de cartas com base no nível escolhido
             let uniqueCards;
             if (level === 1) {
-                uniqueCards = getRandomUniqueCards(data, 3); // Seleciona 3 cartas únicas aleatoriamente
-                gridContainer.style.gridTemplateColumns = "repeat(3, 140px)"; // Define 3 colunas para o nível 1
-                gridContainer.style.gridTemplateRows = "repeat(2, calc(140px / 2 * 3))"; // Define 2 linhas para o nível 1
+                uniqueCards = getRandomUniqueCards(data, 3); 
+                gridContainer.style.gridTemplateColumns = "repeat(3, 140px)"; 
+                gridContainer.style.gridTemplateRows = "repeat(2, calc(140px / 2 * 3))"; 
             } else if (level === 2) {
-                uniqueCards = getRandomUniqueCards(data, 4); // Seleciona 4 cartas únicas aleatoriamente
-                gridContainer.style.gridTemplateColumns = "repeat(4, 140px)"; // Define 3 colunas para o nível 1
-                gridContainer.style.gridTemplateRows = "repeat(2, calc(140px / 2 * 3))"; // Define 2 linhas para o nível 1
+                uniqueCards = getRandomUniqueCards(data, 4); 
+                gridContainer.style.gridTemplateColumns = "repeat(4, 140px)"; 
+                gridContainer.style.gridTemplateRows = "repeat(2, calc(140px / 2 * 3))"; 
             } else if (level === 3) {
-                uniqueCards = getRandomUniqueCards(data, 6); // Seleciona 6 cartas únicas aleatoriamente
-                gridContainer.style.gridTemplateColumns = "repeat(4, 140px)"; // Define 3 colunas para o nível 1
-                gridContainer.style.gridTemplateRows = "repeat(2, calc(140px / 2 * 3))"; // Define 2 linhas para o nível 1
+                uniqueCards = getRandomUniqueCards(data, 6); 
+                gridContainer.style.gridTemplateColumns = "repeat(4, 140px)"; 
+                gridContainer.style.gridTemplateRows = "repeat(2, calc(140px / 2 * 3))";
             } else {
-                // Se o nível for inválido, exibe uma mensagem de erro ou fallback para um nível padrão
                 console.error("Nível de dificuldade inválido!");
                 return;
             }
 
-            // Duplica o conjunto de cartas para que haja pares de cada tipo
             cards = [...uniqueCards, ...uniqueCards];
 
             shuffleCards();
             generateCards();
-            // Oculta o menu e exibe o jogo
+            
             menuContainer.style.display = 'none';
             gameContainer.style.display = 'block';
 
-            // Vira todas as cartas
             document.querySelectorAll('.card').forEach(card => card.classList.add('flipped'));
 
-            // Vira as cartas de volta após um tempo
             setTimeout(() => {
                 document.querySelectorAll('.card').forEach(card => card.classList.remove('flipped'));
             }, 7000); // Tempo de exposição das cartas em milissegundos (7 segundos no exemplo)
         });
 }
 
-// Função para selecionar aleatoriamente um número específico de cartas exclusivas
 function getRandomUniqueCards(cards, count) {
     const uniqueCards = [];
-    const shuffledCards = cards.sort(() => Math.random() - 0.5); // Embaralha as cartas
+    const shuffledCards = cards.sort(() => Math.random() - 0.5); 
     for (let i = 0; i < count; i++) {
-        uniqueCards.push(shuffledCards[i]); // Adiciona as cartas embaralhadas à lista de cartas exclusivas
+        uniqueCards.push(shuffledCards[i]); 
     }
     return uniqueCards;
 }
@@ -112,10 +108,9 @@ function checkForMatch() {
 
     if (isMatch) {
         disableCards();
-        score++; // Incrementa o score apenas se houver um acerto
+        score++; 
         document.querySelector(".score").textContent = score;
         if (score === cards.length / 2) {
-            // Todos os pares foram encontrados, exibe a mensagem de parabéns
             const congratsMessage = document.querySelector('.congrats-message');
             congratsMessage.style.display = 'block';
             setTimeout(() => {
@@ -151,26 +146,21 @@ function resetBoard() {
 
 function restart() {
     resetBoard();
-    shuffleCards();
     score = 0;
     document.querySelector(".score").textContent = score;
     gridContainer.innerHTML = "";
-    generateCards();
+    startGame(currentLevel);
 
-    // Vira todas as cartas após um breve atraso
     document.querySelectorAll('.card').forEach(card => card.classList.add('flipped'));
 
-    // Vira as cartas de volta após um tempo
     setTimeout(() => {
         document.querySelectorAll('.card').forEach(card => card.classList.remove('flipped'));
     }, 7000); // Tempo de exposição das cartas em milissegundos (2 segundos no exemplo)
 }
 
 function returnToMenu() {
-    // Oculta o jogo e exibe o menu
     gameContainer.style.display = 'none';
     menuContainer.style.display = 'block';
-    // Reseta o jogo
     resetBoard();
     score = 0;
     document.querySelector(".score").textContent = score;
