@@ -1,3 +1,47 @@
+const cardsData = [
+    {
+        "image": "images/corinthians.png",
+        "name": "Corinthians"
+    },
+    {
+        "image": "images/sao-paulo.png",
+        "name": "São paulo"
+    },
+    {
+        "image": "images/palmeiras.png",
+        "name": "Palmeiras"
+    },
+    {
+        "image": "images/santos.png",
+        "name": "Santos"
+    },
+    {
+        "image": "images/brasil.png",
+        "name": "Brasil"
+    },
+    {
+        "image": "images/noroeste.svg",
+        "name": "Noroeste"
+    },
+    {
+        "image": "images/apito.png",
+        "name": "Apito"
+    },
+    {
+        "image": "images/trofeu.png",
+        "name": "Troféu"
+    },
+    {
+        "image": "images/gol-de-futebol.png",
+        "name": "Gol"
+    },
+    {
+        "image": "images/bola-futebol.png",
+        "name": "Bola"
+    }
+];
+
+
 const menuContainer = document.querySelector(".menu");
 const gameContainer = document.querySelector(".game-container");
 const gridContainer = document.querySelector(".grid-container");
@@ -11,50 +55,46 @@ document.querySelector(".score").textContent = score;
 
 function startGame(level) {
     currentLevel = level;
-    fetch("../assets/data/cards.json")
-        .then((res) => res.json())
-        .then((data) => {
-            let uniqueCards;
-            let numColumns;
-            let levelText;
-            if (level === 1) {
-                uniqueCards = getRandomUniqueCards(data, 3); 
-                numColumns = 3;
-                levelText = "Nível 1";
-            } else if (level === 2) {
-                uniqueCards = getRandomUniqueCards(data, 4); 
-                numColumns = 4;
-                levelText = "Nível 2";
-            } else if (level === 3) {
-                uniqueCards = getRandomUniqueCards(data, 6); 
-                numColumns = 4;
-                levelText = "Nível 3";
-            } else {
-                console.error("Nível de dificuldade inválido!");
-                return;
-            }
+    let data = cardsData; 
+    let uniqueCards;
+    let numColumns;
+    let levelText;
+    if (level === 1) {
+        uniqueCards = getRandomUniqueCards(data, 3); 
+        numColumns = 3;
+        levelText = "Nível 1";
+    } else if (level === 2) {
+        uniqueCards = getRandomUniqueCards(data, 4); 
+        numColumns = 4;
+        levelText = "Nível 2";
+    } else if (level === 3) {
+        uniqueCards = getRandomUniqueCards(data, 6); 
+        numColumns = 4;
+        levelText = "Nível 3";
+    } else {
+        console.error("Nível de dificuldade inválido!");
+        return;
+    }
 
-            cards = [...uniqueCards, ...uniqueCards];
+    cards = [...uniqueCards, ...uniqueCards];
 
-            // Ajusta dinamicamente o tamanho do grid
-            const numRows = Math.ceil(uniqueCards.length / numColumns);
-            gridContainer.style.gridTemplateColumns = `repeat(${numColumns}, min-content)`;
-            gridContainer.style.gridTemplateRows = `repeat(${numRows}, min-content)`;
+    const numRows = Math.ceil(uniqueCards.length / numColumns);
+    gridContainer.style.gridTemplateColumns = `repeat(${numColumns}, min-content)`;
+    gridContainer.style.gridTemplateRows = `repeat(${numRows}, min-content)`;
 
-            document.querySelector('.game-container h2').textContent = levelText;
-        
-            shuffleCards();
-            generateCards();
-            
-            menuContainer.style.display = 'none';
-            gameContainer.style.display = 'block';
+    document.querySelector('.game-container h2').textContent = levelText;
 
-            document.querySelectorAll('.card').forEach(card => card.classList.add('flipped'));
+    shuffleCards();
+    generateCards();
 
-            setTimeout(() => {
-                document.querySelectorAll('.card').forEach(card => card.classList.remove('flipped'));
-            }, 7000); // Tempo de exposição das cartas em milissegundos (7 segundos no exemplo)
-        });
+    menuContainer.style.display = 'none';
+    gameContainer.style.display = 'block';
+
+    document.querySelectorAll('.card').forEach(card => card.classList.add('flipped'));
+
+    setTimeout(() => {
+        document.querySelectorAll('.card').forEach(card => card.classList.remove('flipped'));
+    }, 7000); // Tempo de exposição das cartas em milissegundos (7 segundos no exemplo)
 }
 
 function getRandomUniqueCards(cards, count) {
