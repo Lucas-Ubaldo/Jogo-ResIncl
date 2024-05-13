@@ -162,7 +162,10 @@ function selectAnswer(e){
         }
         button.disabled = true;
     });
-    nextButton.style.display = "block";
+    setTimeout(() => { 
+        handleNextButton();
+    }, 3000); 
+    //nextButton.style.display = "block";
 }
 
 function showScore(){
