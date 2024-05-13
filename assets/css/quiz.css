@@ -92,7 +92,17 @@ body{
     border-radius: 10px;
     cursor: pointer;
     display: none;
+    animation: pulse 1s infinite alternate;
 }
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+  }
 
 .correct{
     background: #9aeabc;
