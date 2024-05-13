@@ -101,7 +101,7 @@ body{
     background: #ff9393;
 }
 
-/* Estilos para telas menores que 400px */
+
 @media screen and (max-width: 400px) {
 
     .app{
@@ -131,5 +131,68 @@ body{
         font-size: 1.1rem;
         padding: 7px;
         
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .app{
+        padding: 15px;
+    }
+
+    .app h1 {
+        font-size: 1.5rem;
+        padding-bottom: 5px;
+    }
+
+    .quiz h2 {
+        font-size: 1.4rem;
+    }
+
+    #question img {
+        width: 25%;
+        margin: 10px auto;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+    }
+
+    #next-btn {
+        width: 60%;
+        font-size: 1.1rem;
+        padding: 7px;
+        
+    }
+}
+
+@media screen and (max-height: 569px){
+    .app{
+        padding: 8px;
+    }
+
+    .app h1 {
+        font-size: 1.1rem;
+        padding-bottom: 5px;
+    }
+
+    .quiz h2 {
+        font-size: 1rem;
+    }
+
+    #question img {
+        width: 25%;
+        margin: 10px auto;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    #next-btn {
+        width: 55%;
+        font-size: 1rem;
+        padding: 4px;
+        margin: 5px auto 0;
     }
 }
