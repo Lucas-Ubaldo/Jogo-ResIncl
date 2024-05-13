@@ -1,7 +1,7 @@
 const questions = [
     {
         question: "Qual é o nome do time abaixo?",
-        image: "../images/corinthians.png",
+        image: "images/corinthians.png",
         answers: [
             {text: "São Paulo", correct: false},
             {text: "Flamengo", correct: false},
@@ -11,7 +11,7 @@ const questions = [
     },
     {
         question: "Qual é o nome do time abaixo?",
-        image: "../images/sao-paulo.png",
+        image: "images/sao-paulo.png",
         answers: [
             {text: "São Paulo", correct: true},
             {text: "Bragantino", correct: false},
@@ -21,7 +21,7 @@ const questions = [
     },
     {
         question: "Qual é o nome da seleção abaixo?",
-        image: "../images/brasil.png",
+        image: "images/brasil.png",
         answers: [
             {text: "França", correct: false},
             {text: "Argentina", correct: false},
@@ -31,7 +31,7 @@ const questions = [
     },
     {
         question: "Qual é o nome do time abaixo?",
-        image: "../images/palmeiras.png",
+        image: "images/palmeiras.png",
         answers: [
             {text: "Guarani", correct: false},
             {text: "Palmeiras", correct: true},
@@ -41,7 +41,7 @@ const questions = [
     },
     {
         question: "Qual é o nome do time abaixo?",
-        image: "../images/santos.png",
+        image: "images/santos.png",
         answers: [
             {text: "Santos", correct: true},
             {text: "Atlético-MG", correct: false},
@@ -51,7 +51,7 @@ const questions = [
     },
     {
         question: "Qual é o nome do time abaixo?",
-        image: "../images/noroeste.svg",
+        image: "images/noroeste.svg",
         answers: [
             {text: "Athletico-PR", correct: false},
             {text: "Flamengo", correct: false},
@@ -61,7 +61,7 @@ const questions = [
     },
     {
         question: "Qual é o objeto?",
-        image: "../images/apito.png",
+        image: "images/apito.png",
         answers: [
             {text: "Bola de futebol", correct: false},
             {text: "Apito", correct: true},
@@ -71,7 +71,7 @@ const questions = [
     },
     {
         question: "Qual é o objeto?",
-        image: "../images/bola-futebol.png",
+        image: "images/bola-futebol.png",
         answers: [
             {text: "Apito", correct: false},
             {text: "Bola de basquete", correct: false},
@@ -81,7 +81,7 @@ const questions = [
     },
     {
         question: "Qual é o objeto?",
-        image: "../images/bandeira-impedimento.png",
+        image: "images/bandeira-impedimento.png",
         answers: [
             {text: "Bandeira de impedimento", correct: true},
             {text: "Troféu", correct: false},
@@ -91,7 +91,7 @@ const questions = [
     },
     {
         question: "Qual é o objeto?",
-        image: "../images/trofeu.png",
+        image: "images/trofeu.png",
         answers: [
             {text: "Copo", correct: false},
             {text: "Troféu", correct: true},
