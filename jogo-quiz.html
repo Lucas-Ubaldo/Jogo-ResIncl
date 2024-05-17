@@ -11,7 +11,13 @@
     <main>
         <div class="app">
             <h1>Quiz</h1>
-            <div class="quiz">
+            <div id="button-container">
+                <button class="btn" onclick="startQuiz('objeto')">Objeto</button>
+                <button class="btn" onclick="startQuiz('times')">Times</button>
+                <button class="btn" onclick="startQuiz('conhecimento')">Conhecimento</button>
+                <button class="btn-back" onclick="location.href='index.html'">Voltar</button>
+            </div>
+            <div class="quiz" style="display: none;">
                 <h2 id="question">Questão</h2>
                 <div id="answer-buttons">
                     <button class="btn">Answer 1</button>
@@ -21,10 +27,10 @@
                     <button class="btn">Answer 5</button>
                 </div>
                 <button id="next-btn">Próxima</button>
+                <button id="back-btn" onclick="goBack()">Voltar</button>
             </div>
         </div>
     </main>
     <script src="./assets/js/quiz.js"></script>
 </body>
-
 </html>
