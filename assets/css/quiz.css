@@ -104,6 +104,48 @@ body{
     }
   }
 
+  #back-btn {
+    background: #001e4d;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: 150px;
+    height: auto;
+    border: 1px solid #001e4d;
+    padding: 15px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    transition: all 0.3s;
+}
+
+#back-btn:hover:not([disabled]) {
+    background: #001e4dda;
+    color: #fff;
+}
+
+.btn-back{
+    background: #001e4d;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: 150px;
+    height: auto;
+    border: 1px solid #001e4d;
+    padding: 15px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    transition: all 0.3s;
+}
+
+.btn-back:hover{
+    background: #001e4dda;
+    color: #fff;
+}
+
 .correct{
     background: #9aeabc;
 }
@@ -142,6 +184,11 @@ body{
         padding: 7px;
         
     }
+    #back-btn {
+        width: 60%;
+        font-size: 1.1rem;
+        padding: 7px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -174,6 +221,11 @@ body{
         padding: 7px;
         
     }
+    #back-btn {
+        width: 60%;
+        font-size: 1.1rem;
+        padding: 7px;
+    }
 }
 
 @media screen and (max-height: 569px){
@@ -200,6 +252,12 @@ body{
     }
 
     #next-btn {
+        width: 55%;
+        font-size: 1rem;
+        padding: 4px;
+        margin: 5px auto 0;
+    }
+    #back-btn {
         width: 55%;
         font-size: 1rem;
         padding: 4px;
