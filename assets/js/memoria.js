@@ -1,42 +1,42 @@
 const cardsData = [
     {
-        "image": "images/corinthians.png",
+        "image": "images/times/corinthians.png",
         "name": "Corinthians"
     },
     {
-        "image": "images/sao-paulo.png",
+        "image": "images/times/sao-paulo.png",
         "name": "São paulo"
     },
     {
-        "image": "images/palmeiras.png",
+        "image": "images/times/palmeiras.png",
         "name": "Palmeiras"
     },
     {
-        "image": "images/santos.png",
+        "image": "images/times/santos.png",
         "name": "Santos"
     },
     {
-        "image": "images/brasil.png",
+        "image": "images/times/brasil.png",
         "name": "Brasil"
     },
     {
-        "image": "images/noroeste.svg",
+        "image": "images/times/noroeste.svg",
         "name": "Noroeste"
     },
     {
-        "image": "images/apito.png",
+        "image": "images/objetos/apito.png",
         "name": "Apito"
     },
     {
-        "image": "images/trofeu.png",
+        "image": "images/objetos/trofeu.png",
         "name": "Troféu"
     },
     {
-        "image": "images/gol-de-futebol.png",
+        "image": "images/objetos/gol-de-futebol.png",
         "name": "Gol"
     },
     {
-        "image": "images/bola-futebol.png",
+        "image": "images/objetos/bola-futebol.png",
         "name": "Bola"
     }
 ];
