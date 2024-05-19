@@ -112,6 +112,46 @@ const timesQuestions = [
             {text: "Palmeiras", correct: true},
         ]
     },
+    { //7
+        question: "Qual é o nome do time abaixo?",
+        image: "images/times/flamengo.png",
+        answers: [
+            {text: "Flamengo", correct: true},
+            {text: "Internacional", correct: false},
+            {text: "Fluminense", correct: false},
+            {text: "Vasco", correct: false},
+        ]
+    },
+    { //8
+        question: "Qual é o nome do time abaixo?",
+        image: "images/times/real-madrid.png",
+        answers: [
+            {text: "Barcelona", correct: false},
+            {text: "Manchester City", correct: false},
+            {text: "Real Madrid", correct: true},
+            {text: "Atlético Madrid", correct: false},
+        ]
+    },
+    { //9
+        question: "Qual é o nome do time abaixo?",
+        image: "images/times/barcelona.png",
+        answers: [
+            {text: "Real Madrid", correct: false},
+            {text: "Barcelona", correct: true},
+            {text: "Real Sociedad", correct: false},
+            {text: "Sevilla", correct: false},
+        ]
+    },
+    { //10
+        question: "Qual é o nome do time abaixo?",
+        image: "images/times/manchester-city.png",
+        answers: [
+            {text: "Manchester City", correct: true},
+            {text: "Manchester United", correct: false},
+            {text: "Arsenal", correct: false},
+            {text: "Real Madrid", correct: false},
+        ]
+    },
     
     
 ];
