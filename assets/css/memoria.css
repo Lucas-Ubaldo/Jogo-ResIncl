@@ -18,14 +18,12 @@
   
   h1 {
     text-align: center;
+    text-transform: uppercase;
     font-weight: 700;
     font-size: 3.5rem;
     color: #001e4d;
     margin-bottom: 10px;
-    text-shadow: -1px -1px 0 #000,  
-                 1px -1px 0 #000,
-                -1px 1px 0 #000,
-                 1px 1px 0 #000;
+  
   }
   
   footer {
@@ -78,7 +76,7 @@
   }
 
   #back {
-    background-color: #181531; 
+    background-color: #001e4d; 
     border-radius: 40px; 
     color: #ffffff; 
     width: 50%;
@@ -571,7 +569,7 @@
   }
 
   #back {
-    background-color: #181531; 
+    background-color: #001e4d; 
     border-radius: 40px; 
     color: #ffffff; 
     width: 30%;
@@ -580,4 +578,82 @@
   footer img {
     max-width: 15em;
   }
+}
+
+@media screen and (max-height: 360px){
+  h1{
+    font-size: 2rem;
+  }
+
+  .menu {
+    width: 50%;
+    max-width: 80%;
+    border-radius: 20px;
+  }
+    
+  .menu h2{
+    font-size: 1.1rem;
+  }
+      
+  .actions-menu button {
+    font-size: 1.1em;
+    width: 200px;
+        
+  }
+
+  .actions-jogo button {
+    font-size: 1.2em;
+    padding: 4px 8px;
+    margin-bottom: 5px;
+  }
+
+  .game-container h2{
+    font-size: 1.2rem;
+    margin-top: 0px;
+  }
+
+  .game-container h1{
+    margin-top: 0;
+  }
+
+  .grid-container {
+    grid-gap: 4px;
+  }
+      
+  .card {
+    height: 8em;
+    width: 7em;
+  }
+      
+  .front-image {
+    width: 4em;
+    height: 4em;
+  }
+
+  .card-name {
+    font-size: 1rem;
+    bottom: 10px;
+  }
+  .congrats-message {
+    padding: 10px;
+    white-space: nowrap;
+    width: 300px;
+  }
+      
+  .congrats-message p {
+    font-size: 2rem;
+  }
+
+  #back {
+    background-color: #181531; 
+    border-radius: 40px; 
+    color: #ffffff; 
+    width: 15rem;
+}
+
+footer {
+  display: none;
+
+}
+
 }
