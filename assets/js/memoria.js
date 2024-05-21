@@ -24,6 +24,14 @@ const cardsData = [
         "name": "Noroeste"
     },
     {
+        "image": "images/times/flamengo.png",
+        "name": "Flamengo"
+    },
+    {
+        "image": "images/times/barcelona.png",
+        "name": "Barcelona"
+    },
+    {
         "image": "images/objetos/apito.png",
         "name": "Apito"
     },
@@ -94,7 +102,7 @@ function startGame(level) {
 
     setTimeout(() => {
         document.querySelectorAll('.card').forEach(card => card.classList.remove('flipped'));
-    }, 7000); // Tempo de exposição das cartas em milissegundos (7 segundos no exemplo)
+    }, 10000); // Tempo de exposição das cartas (10 segundos no exemplo)
 }
 
 function getRandomUniqueCards(cards, count) {
@@ -204,7 +212,7 @@ function restart() {
 
     setTimeout(() => {
         document.querySelectorAll('.card').forEach(card => card.classList.remove('flipped'));
-    }, 7000); // Tempo de exposição das cartas em milissegundos (2 segundos no exemplo)
+    }, 10000); // Tempo de exposição das cartas (10 segundos no exemplo)
 }
 
 function returnToMenu() {
